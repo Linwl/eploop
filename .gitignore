@@ -1,0 +1,8 @@
+.idea/
+*.pyc
+*.log
+*.spec
+*.zip
+dist/
+apidoc/
+templates/
