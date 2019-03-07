@@ -50,5 +50,5 @@ class EpollIOLoop:
                 elif event & select.EPOLLOUT:
                     # 发送数据
                     self.connections[fileno].send(self.requests[fileno])
-                    # 将客户端文件句柄整形的 从EPOLLOUT中转移到 EPOLLIN
-                    self.epoll.modify(fileno, select.EPOLLIN)
+                    # 将客户端文件句柄整形的 从EPOLLOUT中转移到 EPOLLHUP
+                    self.epoll.modify(fileno, select.EPOLLHUP)
